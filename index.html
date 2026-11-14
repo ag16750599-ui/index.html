@@ -1,113 +1,192 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <!-- ✅ 1. كود التحقق من ExoClick (تم وضعه في المكان الصحيح) -->
+    <meta name="6a97888e-site-verification" content="4e6d185b89d098ff6f27c37eedf8adb2">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>محتوى حصري 18+</title>
-    <!-- استدعاء مكتبة تيليجرام للويب -->
+    <title>المنطقة الحصرية 18+</title>
+    
+    <!-- استدعاء مكتبة تيليجرام -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- استدعاء خط عربي احترافي -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-color: #0f0f13;
-            --card-bg: #1c1c24;
+            --bg-color: #0a0a0f;
+            --card-bg: #15151e;
             --text-main: #ffffff;
-            --text-muted: #8a8a9e;
-            --accent: #ff3b5c;
+            --text-muted: #9ba1a6;
+            --accent: #ff2a5f;
+            --accent-hover: #e01b4c;
+            --glass-border: rgba(255, 255, 255, 0.05);
         }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
             background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 42, 95, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 42, 95, 0.05) 0%, transparent 40%);
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Tajawal', -apple-system, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            padding: 15px;
-            box-sizing: border-box;
+            padding: 20px;
+            overflow-x: hidden;
         }
+
         .container {
             background-color: var(--card-bg);
-            padding: 25px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 var(--glass-border);
             width: 100%;
             max-width: 400px;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            border: 1px solid var(--glass-border);
+            animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .badge {
-            background-color: rgba(255, 59, 92, 0.1);
+            background: linear-gradient(135deg, rgba(255, 42, 95, 0.15), rgba(255, 42, 95, 0.05));
             color: var(--accent);
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 8px 18px;
+            border-radius: 30px;
             font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            border: 1px solid rgba(255, 59, 92, 0.2);
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 42, 95, 0.2);
+            box-shadow: 0 4px 15px rgba(255, 42, 95, 0.1);
         }
+
         h1 {
-            font-size: 22px;
-            margin: 0 0 10px 0;
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
+            background: linear-gradient(to left, #fff, #b3b3b3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
         p {
             color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 25px;
-            line-height: 1.5;
+            font-size: 15px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-weight: 400;
         }
-        /* حاوية الإعلان */
-        .ad-container {
+
+        /* تصميم حاوية الإعلان */
+        .ad-wrapper {
+            position: relative;
             width: 100%;
-            min-height: 250px;
-            background-color: #24242e;
-            border: 2px dashed #3a3a4a;
-            border-radius: 12px;
+            min-height: 260px;
+            background-color: #1c1c26;
+            border: 1px dashed #333344;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            margin-bottom: 20px;
-            position: relative;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
         }
-        .ad-placeholder-text {
-            color: #555566;
-            font-size: 14px;
-            font-weight: bold;
+
+        .ad-wrapper:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(255, 42, 95, 0.1);
         }
-        .footer {
-            font-size: 12px;
+
+        .ad-placeholder {
             color: #444455;
-            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: #555566;
+            line-height: 1.5;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+
+        /* حركة النبض للإعلان أثناء التحميل */
+        .pulse {
+            animation: pulse-anim 2s infinite;
+        }
+        @keyframes pulse-anim {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="badge">🔞 مخصص للبالغين فقط</div>
-        <h1>أهلاً بك في المنطقة الحصرية</h1>
-        <p>تم التحقق من عمرك بنجاح. يمكنك الآن استكشاف المحتوى المميز والمنتجات المثيرة.</p>
+        <div class="badge">
+            <span>🔞</span> مخصص للبالغين فقط
+        </div>
         
-        <!-- ⚠️ منطقة الإعلان: ضع كود ExoClick هنا -->
-        <div class="ad-container">
-            <!-- احذف النص أدناه وضع كود ExoClick الخاص بك مكانه -->
-            <span class="ad-placeholder-text">[ مكان إعلان ExoClick ]</span>
+        <h1>المنطقة الحصرية</h1>
+        <p>تم التحقق من عمرك بنجاح. يمكنك الآن استكشاف المحتوى المميز والعروض الخاصة.</p>
+        
+        <!-- 
+        ⚠️ هنا مكان إعلان ExoClick:
+        احذف السطر الذي يحتوي على [ مكان إعلان ExoClick ] 
+        والصق كود الإعلان (Ad Tag) الذي نسخته من لوحة تحكم ExoClick هنا.
+        -->
+        <div class="ad-wrapper">
+            <!-- ابدأ لصق كود ExoClick من هنا -->
+            <span class="ad-placeholder pulse">[ مكان إعلان ExoClick ]</span>
+            <!-- انتهى كود ExoClick -->
         </div>
 
-        <div class="footer">
-            بالبقاء في هذه الصفحة، أنت توافق على شروط الاستخدام.
+        <div class="footer-note">
+            بالبقاء في هذه الصفحة، أنت توافق على شروط الاستخدام وسياسة الخصوصية. <br> جميع الحقوق محفوظة &copy; 2024.
         </div>
     </div>
 
     <script>
-        // تفعيل وضع ملء الشاشة في تيليجرام
+        // تفعيل وضع ملء الشاشة والتحكم في ألوان تيليجرام
         let tg = window.Telegram.WebApp;
+        
         if (tg) {
-            tg.expand(); // جعل الصفحة تملأ الشاشة
-            tg.setHeaderColor('#0f0f13'); // تغيير لون الهيدر ليتناسب مع التصميم المظلم
-            tg.setBackgroundColor('#0f0f13'); // تغيير لون الخلفية
+            // جعل التطبيق يملأ الشاشة
+            tg.expand(); 
+            
+            // تغيير ألوان تيليجرام لتتطابق مع التصميم المظلم
+            tg.setHeaderColor('#0a0a0f');
+            tg.setBackgroundColor('#0a0a0f');
+            
+            // تفعيل ردود الفعل الاهتزازية الخفيفة (Haptic Feedback)
+            if (tg.HapticFeedback) {
+                tg.HapticFeedback.impactOccurred('light');
+            }
         }
     </script>
 </body>
